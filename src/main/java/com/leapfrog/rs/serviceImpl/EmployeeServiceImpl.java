@@ -4,7 +4,6 @@ import com.leapfrog.rs.model.Employee;
 import com.leapfrog.rs.service.EmployeeService;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
 import java.util.List;
@@ -12,7 +11,7 @@ import java.util.List;
 public class EmployeeServiceImpl implements EmployeeService {
 
     Session session;
-    Transaction trans;
+
     public EmployeeServiceImpl(){
         super();
         SessionFactory sessionFactory = new Configuration().configure()
